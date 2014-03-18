@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/slide-css.css" rel="stylesheet" />
+    <link href="resources/css/jumbotron-narrow.css" rel="stylesheet"/>
+    <link href="resources/css/index.css" rel="stylesheet"/>
+    <script type="text/javascript" src="resources/js/jquery.js"></script>
+    <script type="text/javascript" src="resources/js/slides.min.jquery.js"></script>
+    <script type="text/javaScript" src="resources/js/angular.min.js"></script>
+    <script type="text/javascript" src="resources/js/app/controller.js"></script>
+    <script>
+      $(function(){
+        $('#slides').slides({
+          preload: true,
+          preloadImage: 'img/loading.gif',
+          play: 5000,
+          pause: 2500,
+          hoverPause: true
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- navigator -->
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">首页</a></li>
+          <li><a href="list.html">信息查询</a></li>
+          <li><a href="#">个人信息</a></li>
+        </ul>
+        <h3 class="text-muted">血库管理系统</h3>
+      </div>
+
+      <!-- slide -->
+      <div id="slides">
+        <div class="slides_container" ng-controller="SlideCtrl">
+          <a href="" target="_blank" ng-repeat="slide in slides">
+            <img ng-src="{{slide.imgurl}}"/>
+          </a>
+        </div>
+      </div>
+
+      <!-- news -->
+      <div id="newsContainer" ng-controller="NewsListCtrl">
+        <div class="newsBlock" ng-repeat="news in newsList">
+          <div class="newsContent">{{news.content}}</div>
+          <div class="newsImg">
+             <img class="theImg" ng-src="{{news.url}}"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div class="footer">
+        <p>&copy; Bnuz.IT 2014</p>
+      </div>
+
+    </div>
+  </body>
+</html>

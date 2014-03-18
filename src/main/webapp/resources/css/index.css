@@ -1,0 +1,31 @@
+body {
+	background-color:rgb(238,238,238);
+}
+
+
+.newsBlock {
+	width:100%;
+	border-radius:5px;
+	background-color:white;
+	padding:10px 10px;
+	margin-bottom: 10px;
+}
+
+.newsContent {
+	width:700px;
+	margin-left:10px;
+	margin-top:5px;
+	font-size:13px;
+	font-family:Arial,Helvetica,sans-serif;
+}
+
+.newsImg {
+	width:700px;
+	margin-left:10px;
+	margin-top:10px;
+}
+
+.theImg {
+	width:300px;
+	height:170px;
+}
